@@ -1,9 +1,6 @@
-import { app } from "./app";
-import logger from "@/utils/logger";
+import app from './app';
+import { PORT } from './config/env';
 
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-  logger.info(`Estas en el puesto: ${port}`);
+app.listen(PORT, () => {
+    console.log(`Servidor en el puerto: ${PORT}`)
 })
